@@ -1,0 +1,22 @@
+
+
+<h1 class="text-center">Welcome <%= @user.name %> to your Profile</h1>
+<% flash.each do |type, msg| %>
+  <div style="color: green" class="text-center">
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= render @user %>
+
+<div class="text-center">
+  <%= link_to "Edit this user", edit_user_path(@user), class: "btn btn-outline-success" %> 
+  </div>
+  <br>
+<div class="text-center">
+  <%= link_to "Back to users", users_path, class: "btn btn-outline-info" %>
+  </div>
+  <br>
+<div class="text-center">
+  <%= button_to "Destroy this user", @user, method: :delete , class: "btn btn-outline-danger" %>
+</div>

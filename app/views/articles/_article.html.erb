@@ -1,0 +1,20 @@
+<table class="table table-sm" id="<%= dom_id article %>">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title of Article</th>
+      <th scope="col">Author of Article</th>
+      <th scope="col">Article</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= article.id %></th>
+      <td> <%= article.name %></td>
+      <td> <%= article.user.name %></td>
+      <td> <%= article.body %></td>
+      
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Articles</h1>
+
+<div id="articles">
+  <% @articles.each do |article| %>
+    <%= render article %>
+    <p>
+      <%= link_to "Show this article", article ,  class: "btn btn-outline-warning"%>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New article", new_article_path, class: "btn btn-outline-success" %>
